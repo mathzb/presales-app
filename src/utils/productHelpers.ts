@@ -2,6 +2,7 @@
  * Product resolution and pricing utility functions
  * Used for matching subscriptions to products and calculating prices
  */
+import type { ProductResult } from "../types/product";
 
 /**
  * Parse months from ISO8601 term duration (e.g., P1M, P12M, P1Y)
@@ -32,12 +33,22 @@ export const monthsFromCommitmentLabel = (commitment: string): number => {
 };
 
 /**
+ * Get maximum quantity allowed for a product from its attributes
+ */
+export const getMaxQuantity = (productResult: ProductResult): number | null => {
+  const maxQuantityStr = productResult.product.attributes?.["maximum-quantity"];
+  if (!maxQuantityStr) return null;
+  const maxQuantity = parseInt(maxQuantityStr, 10);
+  return isNaN(maxQuantity) ? null : maxQuantity;
+};
+
+/**
  * Convert a per-term unit price to per-billing-cycle
  */
 export const perBillingFromUnit = (
   unit: number,
   billingCycle: string,
-  monthsInTerm: number | null | undefined
+  monthsInTerm: number | null | undefined,
 ): number => {
   if (!monthsInTerm || monthsInTerm <= 0) return unit;
   if (billingCycle === "Monthly") {

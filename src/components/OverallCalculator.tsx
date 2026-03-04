@@ -14,7 +14,7 @@ import { useToast } from "../context/ToastContext";
 import { formatCurrency } from "../utils/currency";
 import { exportToExcel } from "../utils/excelExport";
 import { logger } from "../utils/logger";
-import { getMaxQuantity } from "../utils/incentiveHelpers";
+import { getMaxQuantity } from "../utils/productHelpers";
 import TotalsCard from "./calculator/TotalsCard";
 import { Button } from "./ui/button";
 
