@@ -1,0 +1,44 @@
+# Local build – builds the frontend from source and runs it.
+# Usage:
+#   docker-compose -f docker-compose.local.yml up --build
+#
+# Frontend is available at http://localhost:8081
+#
+# VITE_* env vars are build-time ARGs and get inlined by Vite at build time.
+# They cannot be changed at runtime without rebuilding the image.
+
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
+        - VITE_SUPABASE_ANON_KEY=${VITE_SUPABASE_ANON_KEY}
+        - VITE_API_BASE_URL=${VITE_API_BASE_URL}
+        - VITE_REFRESHTOKEN=${VITE_REFRESHTOKEN}
+    container_name: presalesapp-frontend-local
+    ports:
+      - "8081:8080"
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--quiet",
+          "--tries=1",
+          "--spider",
+          "http://localhost:8080/health",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s

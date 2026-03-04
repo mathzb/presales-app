@@ -1,0 +1,42 @@
+version: "3.8"
+
+services:
+  web:
+    image: ghcr.io/mathzb/presales-app:latest
+    container_name: presales-app-prod
+    ports:
+      - "80:8080"
+    restart: unless-stopped
+    environment:
+      # Runtime env for Nginx container; Vite build-time vars must be baked into the image
+      - NODE_ENV=production
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+        labels: "product-calculator"
+        tag: "{{.Name}}/{{.ID}}"
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "wget",
+          "--quiet",
+          "--tries=1",
+          "--spider",
+          "http://localhost:8080/health",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    labels:
+      - "com.product-calculator.description=Product Price Calculator Frontend"
+      - "com.product-calculator.version=1.0.0"
+    networks:
+      - calculator-network
+
+networks:
+  calculator-network:
+    driver: bridge

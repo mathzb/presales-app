@@ -1,0 +1,195 @@
+{
+  "main": {
+    "id": "408f8398f339e10e",
+    "type": "split",
+    "children": [
+      {
+        "id": "34623a6653ff8e54",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1026ead33c4f9676",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DASHBOARD-SUMMARY.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DASHBOARD-SUMMARY"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8df86876c97d0fa3",
+    "type": "split",
+    "children": [
+      {
+        "id": "faca77532aeefa33",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3f74a2c034fb5fdf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a6c7b1395ab71731",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d725068015814846",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "579d4c72a79513c0",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c1f0553883fc4dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62fd2571f7c3c751",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "DASHBOARD-SUMMARY.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for DASHBOARD-SUMMARY"
+            }
+          },
+          {
+            "id": "2f9cdbf5e1e7f79e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "DASHBOARD-SUMMARY.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from DASHBOARD-SUMMARY"
+            }
+          },
+          {
+            "id": "0bda5e6fc7417924",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e033402194c1677c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "DASHBOARD-SUMMARY.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of DASHBOARD-SUMMARY"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "1026ead33c4f9676",
+  "lastOpenFiles": [
+    "src/components/auth/AccessDenied.tsx",
+    "src/components/auth/ProtectedRoute.tsx",
+    "src/components/auth",
+    "src/components/NotFound.tsx",
+    "dist/index.html",
+    "dist/assets/index-DjXxZdfq.js.map",
+    "dist/assets/index-DjTsr-NY.css",
+    "dist/assets/index-DjXxZdfq.js",
+    "dist/assets/index-Cc9DMX74.js.map",
+    "dist/assets/index-Cc9DMX74.js",
+    "dist/assets",
+    "backend/DOCKER.md",
+    "backend/DTO-IMPLEMENTATION.md",
+    "COMPONENT-ENHANCEMENTS.md",
+    "CRUD-IMPLEMENTATION-SUMMARY.md",
+    "INCENTIVE-UPDATE-SUMMARY.md",
+    "INCENTIVE-DISPLAY-FIX.md",
+    "FRONTEND-DTO-INTEGRATION.md",
+    "DEPLOYMENT.md",
+    "ARM64-FIX.md"
+  ]
+}

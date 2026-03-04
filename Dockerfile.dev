@@ -1,0 +1,31 @@
+# Udviklings-image med Node + Vite dev server
+FROM node:20-alpine
+
+
+# App directory
+WORKDIR /app
+
+
+# Installér afhængigheder først (cache-lag)
+COPY package.json package-lock.json* pnpm-lock.yaml* yarn.lock* ./
+RUN \
+if [ -f package-lock.json ]; then npm ci; \
+elif [ -f pnpm-lock.yaml ]; then corepack enable && pnpm i --frozen-lockfile; \
+elif [ -f yarn.lock ]; then corepack enable && yarn install --frozen-lockfile; \
+else npm i; fi
+
+
+# Kopier resten (ikke nødvendigt i dev, men skader ikke)
+COPY . .
+
+
+# Sørg for at Vite lytter på alle interfaces
+ENV VITE_DEV_HOST=0.0.0.0
+ENV CHOKIDAR_USEPOLLING=true
+
+
+EXPOSE 5173
+
+
+# Std: npm run dev; override via docker-compose hvis du bruger pnpm/yarn
+CMD ["npm","run","dev","--","--host","0.0.0.0","--strictPort"]
