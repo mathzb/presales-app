@@ -121,7 +121,9 @@ export default function OverallCalculator() {
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
                 <Calculator className="w-4 h-4" />
                 {cartItems.length}{" "}
-                {cartItems.length === 1 ? "vare i kurv" : "varer i kurv"}
+                {cartItems.length === 1
+                  ? "produkt i beregneren"
+                  : "produkter i beregneren"}
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
                 Produkt beregner
@@ -165,7 +167,7 @@ export default function OverallCalculator() {
                 >
                   <X className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span className="font-medium">
-                    <span className="hidden sm:inline">Tøm </span>Kurv
+                    <span className="hidden sm:inline">Tøm </span>Beregneren
                   </span>
                 </Button>
                 <Button

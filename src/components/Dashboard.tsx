@@ -64,7 +64,7 @@ export default function Dashboard() {
       description: "Registrerede kunder",
     },
     {
-      title: "I Kurv",
+      title: "I Beregneren",
       value: cartItems.length.toString(),
       icon: ShoppingCart,
       gradient: "from-emerald-500 to-teal-500",
@@ -148,7 +148,7 @@ export default function Dashboard() {
                   </CardTitle>
                   <CardDescription className="text-emerald-100">
                     Du har {cartItems.length} produkt
-                    {cartItems.length !== 1 ? "er" : ""} i kurven
+                    {cartItems.length !== 1 ? "er" : ""} i beregneren
                   </CardDescription>
                 </div>
                 <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
@@ -214,7 +214,7 @@ export default function Dashboard() {
                 </div>
                 <div>
                   <p className="font-semibold text-slate-900 dark:text-slate-100">
-                    Tilføj produkter til kurven
+                    Tilføj produkter til beregneren
                   </p>
                   <p className="text-sm text-slate-600 dark:text-slate-400">
                     Gennemse produktkataloget og vælg de produkter, du vil
